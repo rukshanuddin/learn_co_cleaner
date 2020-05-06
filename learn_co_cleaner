@@ -2,7 +2,6 @@
 
 require_relative 'env.rb'
 require 'octokit'
-require 'pry'
 
 unless defined? PAT && defined? USER
   raise StandardError, 'Personal Access Token and User variables must be definied. Please refer to README.md'
@@ -34,6 +33,7 @@ puts 'do you want to delete your ENV file? y/n'
 response = gets.chomp.strip
 
 if response.downcase == 'y'
+  puts
   puts 'deleting the env file (including your Personal Access Token)'
   File.delete('env.rb')
 else
