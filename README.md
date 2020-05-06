@@ -24,7 +24,7 @@ Going through the Flatiron web immersive means completing a lot of lessons. Mech
 ### FAQs
 
 Why not just use real env vars?
-- using a ruby env file with variables, followed by a call that deletes it is a quick, implicit contract with anyone of any skill level who uses this: they can know after using this tool, no trace of their personal access token will be left behind. the use of environment variables may cast doubt on this fact.
+- using a ruby env file with variables, followed by a call that deletes that file is a quick, implicit contract with anyone who uses this: they can know after using this tool, no trace of their personal access token will be left behind. the use of environment variables may cast doubt on this fact, as env vars are not technically not taught as part of the flatiron curriculum. This tool is meant to be accessibile to every grad of every skill level. 
 
 Why not just a real script with curls to the github api endpoints? 
 - Ruby is a tool Flatiron grads are familiar with, so they can quickly audit this tool to make sure it's safe to use. Also using high-quality API wrappers is nice.
