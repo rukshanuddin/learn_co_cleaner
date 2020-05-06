@@ -37,5 +37,8 @@ if response.downcase == 'y'
   puts 'deleting the env file (including your Personal Access Token)'
   File.delete('env.rb')
 else
-  puts 'ok, be sure to delete your Personal Access Token When you done!'
+  puts 'ok, be sure to delete your Personal Access Token when you are done!'
 end
+
+puts 
+puts 'thanks for using learn_co_cleaner!'
