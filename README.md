@@ -5,7 +5,7 @@ Going through the Flatiron web immersive means completing a lot of lessons. Mech
 ### Requirements
 
 - Have Ruby and Bundler installed, version probably doesn't matter.
-- Have a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) for your github account
+- Have a [Personal Access Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) for your github account with repo access
 
 ### How to use it
 
