@@ -33,7 +33,7 @@ response = gets.chomp.strip
 if response.downcase == 'y'
   puts 'deleting this repo... (including your Personal Access Token)'
 
-  system("pwd | tail -c 17 | read tmp ; [ $tmp = 'learn_co_cleaner' ] && cd .. ; rm -rf learn_co_cleaner")
+  system("pwd | tail -c 17 | read tmp ; [ $tmp = 'learn_co_cleaner' ] && rm -rf $dir ")
 else  
-  puts 'ok, be sure to delete your Personal Access Token! When you are done!'
+  puts 'ok, be sure to delete your Personal Access Token! When you done!'
 end
