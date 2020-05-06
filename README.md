@@ -20,3 +20,15 @@ Going through the Flatiron web immersive means completing a lot of lessons. Mech
 9. run `./learn_co_cleaner`
 10. watch as your open pull requests are closed, one by one. 
 11. follow the prompt to delete your env file if desired
+
+### FAQs
+
+Why not just use real env vars?
+- using a ruby file with variables and a call that deletes it is a quick, implicit contract with anyone of any skill level who uses this: they can know after using this tool, no trace of their personal access token will be left behind. the use of environment variables may cast doubt on this fact.
+
+Why not just a real script with curls to the github api endpoints? 
+- high-quality API wrappers are nice and handle all the errors for you
+
+### license
+
+Do whatever you want with this code, fork/modify/customize/redistribute, just don't use it to break anything or hurt anyone.
