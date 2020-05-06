@@ -1,14 +1,16 @@
 #! /usr/bin/env ruby
 
-ENV_ERROR = 'FATAL ERROR: Personal Access Token and User variables must be defined. Please refer to README.md'
+ENV_ERROR = 'Personal Access Token and User variables must be defined. Please refer to README.md'
 
 begin
   require_relative 'env.rb'
-  raise unless defined? PAT && defined? USER
+  unless defined?(PAT) && defined?(USER) 
+    raise StandardError, ENV_ERROR
+  end
 rescue LoadError
   raise StandardError, ENV_ERROR
 end
-
+  
 require 'octokit'
 
 client = Octokit::Client.new(access_token: PAT)
