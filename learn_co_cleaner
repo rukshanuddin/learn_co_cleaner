@@ -25,4 +25,15 @@ until prs.items[0].nil?
 
 end
 
-puts 'deleting this repo... (including your Personal Access Token)'
+puts 'learn-co PR closing for this user complete!'
+puts
+puts 'do you want to delete this repo? y/n'
+response = gets.chomp.strip
+
+if response.downcase == 'y'
+  puts 'deleting this repo... (including your Personal Access Token)'
+
+  system("pwd | tail -c 17 | read tmp ; [ $tmp = 'learn_co_cleaner' ] && cd .. ; rm -rf learn_co_cleaner")
+else  
+  puts 'ok, be sure to delete your Personal Access Token! When you are done!'
+end
