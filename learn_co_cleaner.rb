@@ -4,7 +4,7 @@ require_relative 'env.rb'
 require 'octokit'
 
 unless defined? PAT && defined? USER
-  raise StandardError, 'Personal Access Token and User variables must be definied. Please refer to README.md'
+  raise StandardError, 'Personal Access Token and User variables must be defined. Please refer to README.md'
 end
 
 client = Octokit::Client.new(access_token: PAT)
@@ -24,14 +24,15 @@ end
 
 puts
 puts
-puts 'learn-co PR closing for this user complete!'
+puts 'All learn-co PRs closed for this user!'
 puts
 puts 'do you want to delete your ENV file? y/n'
 
 response = gets.chomp.strip
 
+puts
+
 if response.downcase == 'y'
-  puts
   puts 'deleting the env file (including your Personal Access Token)'
   File.delete('env.rb')
 else

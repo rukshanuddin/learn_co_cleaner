@@ -29,6 +29,10 @@ Why not just use real env vars?
 Why not just a real script with curls to the github api endpoints? 
 - Ruby is a tool Flatiron grads are familiar with, so they can quickly audit this tool to make sure it's safe to use. Also using high-quality API wrappers is nice.
 
+### testimonials
+
+'This worked great, thanks!  It was so cathartic!  Like going back in time and seeing how much I actually learned.  They should actually add this as a final step, after you graduate.'
+
 ### license
 
 Do whatever you want with this code, fork/modify/customize/redistribute, just don't use it to break anything or hurt anyone.
