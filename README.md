@@ -1,6 +1,6 @@
 ### Why this exists
 
-Going through the Flatiron web immersive means completing a lot of lessons. Mechanically, the way these lessons are processed and recognized by Learn.co is through the opening of pull requests from student forks of lesson repos. For some reason, they didn't think to add a 'close pr' to their logic, so students' github open pull requests number in the hundreds by the time they graduate. Github does not offer a way to easily bulk-close repos, so this simple script does that.
+Going through the Flatiron web immersive means completing a lot of lessons. Mechanically, the way these lessons are processed and recognized by Learn.co is through the opening of pull requests from student forks of lesson repos. For some reason, they neglected to include closing the PR in their cli lesson submission logic, so students' github open pull requests number in the hundreds by the time they graduate. Github does not offer a way to easily bulk-close repos, so this simple script does that.
 
 ### Requirements
 
@@ -24,7 +24,7 @@ Going through the Flatiron web immersive means completing a lot of lessons. Mech
 ### FAQs
 
 Why not just use real env vars?
-- using a ruby file with variables and a call that deletes it is a quick, implicit contract with anyone of any skill level who uses this: they can know after using this tool, no trace of their personal access token will be left behind. the use of environment variables may cast doubt on this fact.
+- using a ruby env file with variables, followed by a call that deletes it is a quick, implicit contract with anyone of any skill level who uses this: they can know after using this tool, no trace of their personal access token will be left behind. the use of environment variables may cast doubt on this fact.
 
 Why not just a real script with curls to the github api endpoints? 
 - Ruby is a tool Flatiron grads are familiar with. Also using high-quality API wrappers is nice.
