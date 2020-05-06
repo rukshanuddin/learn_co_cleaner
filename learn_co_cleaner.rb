@@ -1,17 +1,25 @@
 #! /usr/bin/env ruby
 
-require_relative 'env.rb'
-require 'octokit'
+ENV_ERROR = 'FATAL ERROR: Personal Access Token and User variables must be defined. Please refer to README.md'
 
-unless defined? PAT && defined? USER
-  raise StandardError, 'Personal Access Token and User variables must be defined. Please refer to README.md'
+begin
+  require_relative 'env.rb'
+  raise unless defined? PAT && defined? USER
+rescue LoadError
+  raise StandardError, ENV_ERROR
 end
+
+require 'octokit'
 
 client = Octokit::Client.new(access_token: PAT)
 
 prs = client.search_issues("is:open is:pr author:#{USER} org:learn-co-students archived:false")
 
+counter = 0
+
 until prs.items[0].nil?
+
+  counter += prs.items.length
 
   prs.items.each do |pr|
       puts 'closing: ' + pr.repository_url[29..-1]
@@ -24,7 +32,7 @@ end
 
 puts
 puts
-puts 'All learn-co PRs closed for this user!'
+puts "#{counter} learn-co PRs closed for this user!"
 puts
 puts 'do you want to delete your ENV file? y/n'
 
