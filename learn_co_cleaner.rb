@@ -10,12 +10,13 @@ begin
 rescue LoadError
   raise StandardError, ENV_ERROR
 end
-  
-require 'octokit'
 
+require 'octokit'
 client = Octokit::Client.new(access_token: PAT)
 
-prs = client.search_issues("is:open is:pr author:#{USER} org:learn-co-students archived:false")
+QUERY = "is:open is:pr author:#{USER} org:learn-co-students archived:false"
+
+prs = client.search_issues(QUERY)
 
 counter = 0
 
@@ -28,7 +29,7 @@ until prs.items[0].nil?
       client.close_issue(pr.repository_url[29..-1], pr.number)
   end
 
-  prs = client.search_issues("is:open is:pr author:#{USER} org:learn-co-students archived:false")
+  prs = client.search_issues(QUERY)
 
 end
 
