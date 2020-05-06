@@ -25,15 +25,17 @@ until prs.items[0].nil?
 
 end
 
+puts
+puts
 puts 'learn-co PR closing for this user complete!'
 puts
-puts 'do you want to delete this repo? y/n'
+puts 'do you want to delete your ENV file? y/n'
+
 response = gets.chomp.strip
 
 if response.downcase == 'y'
-  puts 'deleting this repo... (including your Personal Access Token)'
-
-  system("pwd | tail -c 17 | read tmp ; [ $tmp == 'learn_co_cleaner' ] && rm -rf $dir ")
-else  
-  puts 'ok, be sure to delete your Personal Access Token! When you done!'
+  puts 'deleting the env file (including your Personal Access Token)'
+  File.delete('env.rb')
+else
+  puts 'ok, be sure to delete your Personal Access Token When you done!'
 end
