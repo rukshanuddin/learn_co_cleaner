@@ -43,6 +43,8 @@ Why not just a real script with curls to the github api endpoints?
 ### Testimonials
 'This worked great, thanks!  It was so cathartic!  Like going back in time and seeing how much I actually learned.  They should actually add this as a final step, after you graduate.'
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/LucySuddenly?ref_src=twsrc%5Etfw">@LucySuddenly</a> this is *SO* satisfying wow <a href="https://t.co/bqWqdXNyIx">pic.twitter.com/bqWqdXNyIx</a></p>&mdash; Pixi 🧚🏻‍♂️✨ (@TheCodePixi) <a href="https://twitter.com/TheCodePixi/status/1258419107055243265?ref_src=twsrc%5Etfw">May 7, 2020</a></blockquote>
+
 ### License
 
 Do whatever you want with this code, fork/modify/customize/redistribute, just don't use it to break anything or hurt anyone.
