@@ -1,0 +1,5 @@
+#! /usr/bin/env ruby
+
+require_relative './learn_co_cleaner.rb'
+
+IRB.start
